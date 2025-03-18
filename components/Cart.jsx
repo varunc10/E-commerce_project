@@ -11,19 +11,19 @@ const Cart = () => {
     const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
     const handleCheckout = async () => {
-        const stripe = await getStripe();
+        // const stripe = await getStripe();
 
-        const response = await fetch('/api/stripe', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(cartItems),
-        });
+        // const response = await fetch('/api/stripe', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(cartItems),
+        // });
 
-        if (response.statusCode === 500) return;
+        // if (response.statusCode === 500) return;
 
-        const data = await response.json();
+        // const data = await response.json();
 
         toast.loading('Redirecting...');
 
