@@ -27,7 +27,9 @@ const Cart = () => {
 
         toast.loading('Redirecting...');
 
-        stripe.redirectToCheckout({ sessionId: data.id });
+        window.location.href = "/success";
+
+        // stripe.redirectToCheckout({ sessionId: data.id });
     }
 
     return (
